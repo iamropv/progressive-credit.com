@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Progressive Credit | Zambia</title>
+
+    <meta name="description"
+          content="Progressive Credit - Loan application services in Zambia.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #073b78;
+            --secondary: #0878d1;
+            --gold: #f5b82e;
+            --light: #f4f8fc;
+            --dark: #172b4d;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: white;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #073b78, #0878d1);
+            color: white;
+            padding: 85px 7%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: 0 auto 28px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--gold);
+            color: #172b4d;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: #ffd166;
+        }
+
+        section {
+            padding: 55px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 35px;
+            color: #52627a;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            padding: 25px;
+            border-radius: 10px;
+            background: var(--light);
+            border: 1px solid #e0e9f3;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .calculator-section {
+            background: var(--light);
+        }
+
+        .calculator,
+        .application-form {
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 15px 0 6px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccd6e2;
+            border-radius: 6px;
+            font-size: 16px;
+            background: white;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid #87c5ff;
+            border-color: var(--secondary);
+        }
+
+        .calculator .button,
+        .application-form .button {
+            width: 100%;
+            margin-top: 22px;
+            font-size: 16px;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 18px;
+            background: #eaf5ff;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .result strong {
+            color: var(--primary);
+        }
+
+        .notice {
+            margin-top: 15px;
+            color: #52627a;
+            font-size: 13px;
+        }
+
+        .contact {
+            text-align: center;
+            background: var(--primary);
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            background: #052b56;
+            color: white;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .hero {
+                padding: 60px 6%;
+            }
+
+            section {
+                padding: 42px 6%;
+            }
+
+            .calculator,
+            .application-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">PROGRESSIVE <span>CREDIT</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#loans">Our Services</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#apply">Apply Now</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <h1>Your Financial Growth, Our Priority</h1>
+
+        <p>
+            Welcome to Progressive Credit. Explore our loan application
+            process and take the next step toward your financial goals.
+        </p>
+
+        <a class="button" href="#apply">Apply for a Loan</a>
+    </section>
+
+    <section id="loans">
+        <h2 class="section-title">Our Services</h2>
+
+        <p class="section-description">
+            Explore financing options that may suit your needs.
+            Actual products, eligibility requirements, interest rates,
+            and terms must be confirmed by Progressive Credit.
+        </p>
+
+        <div class="features">
+            <div class="card">
+                <h3>Personal Loans</h3>
+                <p>
+                    Apply for personal financing to help meet eligible
+                    expenses and individual financial needs.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Business Loans</h3>
+                <p>
+                    Explore financing for eligible business activities
+                    and working-capital needs.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Emergency Financing</h3>
+                <p>
+                    Submit an application for consideration when
+                    unexpected expenses arise.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculator-section" id="calculator">
+        <h2 class="section-title">Loan Calculator</h2>
+
+        <p class="section-description">
+            Estimate your repayments in Zambian Kwacha (ZMW).
+        </p>
+
+        <div class="calculator">
+            <label for="amount">Loan Amount (ZMW)</label>
+
+            <input
+                type="number"
+                id="amount"
+                min="1"
+                max="100000000"
+                step="1"
+                placeholder="e.g. 5000"
+            >
+
+            <label for="months">Repayment Period</label>
+
+            <select id="months">
+                <option value="3">3 months</option>
+                <option value="6">6 months</option>
+                <option value="9">9 months</option>
+                <option value="12">12 months</option>
+                <option value="18">18 months</option>
+                <option value="24">24 months</option>
+            </select>
+
+            <label for="rate">Illustrative Annual Interest Rate (%)</label>
+
+            <input
+                type="number"
+                id="rate"
+                min="0"
+                max="100"
+                step="0.1"
+                value="24"
+            >
+
+            <button class="button" type="button" onclick="calculateLoan()">
+                Calculate Repayment
+            </button>
+
+            <div class="result" id="result" aria-live="polite"></div>
+
+            <p class="notice">
+                This calculator provides an estimate using monthly
+                repayments and a reducing-balance interest calculation.
+                The example rate is not an offer or a confirmed
+                Progressive Credit rate. Fees and actual loan terms
+                may change the amount payable.
+            </p>
+        </div>
+    </section>
+
+    <section id="apply">
+        <h2 class="section-title">Apply for a Loan</h2>
+
+        <p class="section-description">
+            Complete the form below to prepare your loan application.
+        </p>
+
+        <form class="application-form" id="loanForm">
+
+            <label for="fullname">Full Name</label>
+            <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                autocomplete="name"
+                maxlength="100"
+                required
+            >
+
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                placeholder="e.g. +260 97 123 4567"
+                maxlength="20"
+                required
+            >
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                maxlength="254"
+                required
+            >
+
+            <label for="loanType">Loan Type</label>
+            <select id="loanType" name="loanType" required>
+                <option value="">Select a loan type</option>
+                <option value="Personal">Personal Loan</option>
+                <option value="Business">Business Loan</option>
+                <option value="Emergency">Emergency Financing</option>
+            </select>
+
+            <label for="loanAmount">Requested Amount (ZMW)</label>
+            <input
+                type="number"
+                id="loanAmount"
+                name="loanAmount"
+                min="1"
+                max="100000000"
+                step="1"
+                required
+            >
+
+            <label for="period">Preferred Repayment Period</label>
+            <select id="period" name="period" required>
+                <option value="">Select a period</option>
+                <option value="3">3 months</option>
+                <option value="6">6 months</option>
+                <option value="9">9 months</option>
+                <option value="12">12 months</option>
+                <option value="18">18 months</option>
+                <option value="24">24 months</option>
+            </select>
+
+            <label for="employment">Employment Status</label>
+            <select id="employment" name="employment" required>
+                <option value="">Select your status</option>
+                <option value="Employed">Employed</option>
+                <option value="Self-employed">Self-employed</option>
+                <option value="Business owner">Business owner</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="income">Monthly Income (ZMW)</label>
+            <input
+                type="number"
+                id="income"
+                name="income"
+                min="0"
+                max="1000000000"
+                step="0.01"
+                required
+            >
+
+            <label for="purpose">Purpose of Loan</label>
+            <textarea
+                id="purpose"
+                name="purpose"
+                rows="3"
+                maxlength="1000"
+                required
+            ></textarea>
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="consent"
+                    name="consent"
+                    required
+                    style="width:auto; margin-right:8px;"
+                >
+                I agree that my information may be used to process
+                this application, subject to the published privacy notice.
+            </label>
+
+            <button class="button" type="submit">
+                Prepare Application
+            </button>
+
+            <div class="result" id="formMessage" aria-live="polite"></div>
+
+            <p class="notice">
+                Demo only: this form does not send or save your application.
+                Do not enter real financial or identity information until
+                a secure application-processing service is connected.
+            </p>
+        </form>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Progressive Credit</h2>
+
+        <p>
+            Have questions about our loan application process?
+        </p>
+
+        <p style="margin-top: 12px;">
+            Zambia
+        </p>
+
+        <p class="notice" style="color: white;">
+            Official phone number, email address, and physical address
+            to be added by the business owner.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        &copy; <span id="year"></span> Progressive Credit.
+        All rights reserved.
+    </p>
+
+    <p>
+        Submitting an application does not guarantee loan approval.
+        All applications are subject to eligibility checks and applicable terms.
+    </p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    function calculateLoan() {
+        const amount = Number(document.getElementById("amount").value);
+        const months = Number(document.getElementById("months").value);
+        const annualRate = Number(document.getElementById("rate").value);
+        const result = document.getElementById("result");
+
+        result.style.display = "block";
+
+        if (
+            !Number.isFinite(amount) ||
+            !Number.isFinite(months) ||
+            !Number.isFinite(annualRate) ||
+            amount <= 0 ||
+            amount > 100000000 ||
+            months <= 0 ||
+            annualRate < 0 ||
+            annualRate > 100
+        ) {
+            result.textContent =
+                "Enter a valid loan amount and interest rate.";
+            return;
+        }
+
+        const monthlyRate = annualRate / 100 / 12;
+
+        let monthlyPayment;
+
+        if (monthlyRate === 0) {
+            monthlyPayment = amount / months;
+        } else {
+            monthlyPayment =
+                amount *
+                monthlyRate *
+                Math.pow(1 + monthlyRate, months) /
+                (Math.pow(1 + monthlyRate, months) - 1);
+        }
+
+        const totalPayment = monthlyPayment * months;
+        const totalInterest = totalPayment - amount;
+
+        const money = new Intl.NumberFormat("en-ZM", {
+            style: "currency",
+            currency: "ZMW",
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+
+        result.replaceChildren();
+
+        const heading = document.createElement("strong");
+        heading.textContent = "Estimated Repayments";
+        result.appendChild(heading);
+
+        const details = document.createElement("p");
+
+        details.textContent =
+            "Estimated monthly payment: " +
+            money.format(monthlyPayment) +
+            "\nEstimated total repayment: " +
+            money.format(totalPayment) +
+            "\nEstimated interest: " +
+            money.format(totalInterest);
+
+        details.style.whiteSpace = "pre-line";
+        details.style.marginTop = "10px";
+
+        result.appendChild(details);
+    }
+
+    document.getElementById("loanForm").addEventListener(
+        "submit",
+        function(event) {
+            event.preventDefault();
+
+            const message = document.getElementById("formMessage");
+
+            if (!this.reportValidity()) {
+                return;
+            }
+
+            message.style.display = "block";
+            message.textContent =
+                "Your form passed the browser's basic checks, but " +
+                "your application has NOT been submitted or saved. " +
+                "A secure backend must be connected before applications " +
+                "can be received.";
+        }
+    );
+</script>
+
+</body>
+</html>
